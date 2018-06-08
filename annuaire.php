@@ -13,3 +13,22 @@ catch (Exception $e)
 
 ?>
 
+<?php
+
+$reponse = $bdd->query('SELECT * FROM contacts') ;
+
+$cpt = $bdd->query('SELECT COUNT(*) AS nb_contacts FROM contacts') ;
+
+while($donnees=$reponse->fetch()){
+
+      echo '<p>Nom user= ' . $donnees['nom'];
+
+}
+
+while($result=$cpt->fetch()){
+
+      echo '<p>Nombre de contacts= ' . $result[0];
+
+}
+
+ ?>
