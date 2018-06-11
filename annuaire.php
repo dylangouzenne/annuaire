@@ -21,7 +21,7 @@ $cpt = $bdd->query('SELECT COUNT(*) AS nb_contacts FROM contacts') ;
 
 while($donnees=$reponse->fetch()){
 
-      echo '<p>Nom user= ' . $donnees['nom'];
+      echo '<tr><td>Nom: ' . $donnees['nom'] . '<td>Prenom: ' . $donnees['prenom'] . '<td>Email: ' . $donnees['email'];
 
 }
 
